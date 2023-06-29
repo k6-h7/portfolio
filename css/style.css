@@ -1,0 +1,308 @@
+@charset "UTF-8";
+
+* {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+}
+
+#wrap {
+    width: 100%;
+    margin: 0 auto;
+}
+
+header h1 {
+    background: white;
+    color: #00947a;
+    padding: 20px;
+    text-align: center;
+}
+
+
+/* ナビゲーション*/
+.main-menu {
+    background: white;
+    display: none;
+}
+
+.main-menu ul li {
+    text-align: center;
+}
+
+.main-menu ul li a {
+    color: #00947a;
+    display: block;
+    padding: 10px 20px;
+}
+
+.main-menu ul li a:hover {
+    background: #67b5b7;
+    color: aliceblue;
+}
+
+/* main*/
+main {
+    background-color: white;
+    padding: 50px;
+}
+
+.impact_center {
+    text-align: center;
+    padding: 20px;
+}
+
+main h1 {
+    text-align: center;
+    padding: 15px;
+}
+
+main h3 {
+    text-align: center;
+    padding: 5px;
+}
+
+main h4 {
+    padding: 5px;
+}
+
+main li {
+    list-style-type: square;
+    margin: 0 30px;
+}
+
+/* index.html Logo*/
+.Logo {
+    height: 300px;
+    position: relative;
+}
+
+.Logo h1 {
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%)
+}
+
+/* index.htmlページの画像*/
+
+.homeimages {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 4px;
+    padding: 2px;
+}
+
+.homeimages img {
+    width: calc(33.3% - 4px);
+}
+
+img {
+    width: 100%;
+    height: auto;
+    vertical-align: bottom;
+}
+
+#imgSet {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 4px;
+    padding: 2px;
+}
+
+#imgSet li {
+    list-style-type: none;
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+    width: calc(33.3% - 4px);
+}
+
+/* portfolioページの画像*/
+.portimage {
+    text-align: center;
+}
+
+.portimage li {
+    list-style-type: none;
+}
+
+.portimage img {
+    width: 300px;
+    height: auto;
+    padding: 10px;
+}
+
+.portimage iframe {
+    width: 300px;
+    height: auto;
+    padding: 10px;
+}
+
+/* 作品ページの画像*/
+.top-image {
+    text-align: center;
+}
+
+.top-image img {
+    width: 500px;
+    height: auto;
+}
+
+
+footer {
+    background: aliceblue;
+    color: gray;
+    padding: 20px;
+}
+
+
+
+
+
+/* menu button*/
+@media only screen and (max-width: 767px) {
+
+    #navBtn:checked~.main-menu {
+        display: block;
+    }
+
+    #navBtn {
+        display: none;
+    }
+
+    label {
+        cursor: pointer;
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        display: block;
+        text-align: center;
+        color: #00947a;
+    }
+
+    .open {
+        z-index: 100;
+        width: 40px;
+        height: 40px;
+        border: 1px solid #009b9f;
+        border-radius: 2px;
+    }
+
+    /*humburger button*/
+    .open::before,
+    .open::after {
+        content: "";
+    }
+
+    .open span,
+    .open::before,
+    .open::after {
+        content: "";
+        position: absolute;
+        top: 19px;
+        left: 30%;
+        width: 40%;
+        border-bottom: 2px solid #009b9f;
+        transition: transform .5s;
+    }
+
+    .open::before {
+        transform: translateY(-8px);
+    }
+
+    .open::after {
+        transform: translateY(8px);
+    }
+
+    /*close button*/
+    #navBtn:checked+.open {
+        background: #009b9f;
+    }
+
+    #navBtn:checked+.open span {
+        transform: scaleX(0);
+    }
+
+    #navBtn:checked+.open::before {
+        border-bottom: 2px solid aliceblue;
+        transform: rotate(45deg);
+    }
+
+    #navBtn:checked+.open::after {
+        border-bottom: 2px solid aliceblue;
+        transform: rotate(-45deg);
+    }
+}
+
+@media screen and (min-width: 768px) {
+
+    /* ハンバーガーボタン */
+    label {
+        display: none;
+        /*768px以上では使用しない */
+    }
+
+    header {
+        padding: 30px 0 0;
+    }
+
+    #navBtn {
+        display: none;
+    }
+
+    .nav {
+        height: 75px;
+    }
+
+    .main-menu {
+        display: flex;
+        justify-content: center;
+        height: 75px;
+        align-items: center;
+    }
+
+    .main-menu ul {
+        display: flex;
+    }
+
+    .main-menu ul li {
+        text-align: left;
+    }
+
+    /* portfolioページの画像*/
+    .portimage {
+        position: relative;
+        display: flex;
+
+    }
+
+    .portimage li {
+        width: 100%;
+        padding: 5px;
+    }
+
+    .portimage li img {
+        width: 100%;
+    }
+}
+
+/* タブレット用 600px以上〜*/
+@media all and (min-width: 600px) {
+    #wrap {
+        width: 95%;
+    }
+
+
+}
+
+/* コンピュータ用 1025px以上〜 */
+@media all and (min-width: 1025px) {
+
+    #wrap {
+        width: 90%;
+        max-width: 1280px;
+    }
+}
