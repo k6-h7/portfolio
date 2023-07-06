@@ -18,7 +18,12 @@ header h1 {
     padding: 20px;
     text-align: center;
 }
-
+header h1:hover{
+    background: white;
+    color: #00afcc;
+    padding: 20px;
+    text-align: center;
+}
 
 /* ナビゲーション*/
 .main-menu {
@@ -88,17 +93,6 @@ main li {
 
 /* index.htmlページの画像*/
 
-.homeimages {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 4px;
-    padding: 2px;
-}
-
-.homeimages img {
-    width: calc(33.3% - 4px);
-}
-
 img {
     width: 100%;
     height: auto;
@@ -121,6 +115,7 @@ img {
 }
 
 /* portfolioページの画像*/
+
 .portimage {
     text-align: center;
 }
@@ -130,14 +125,19 @@ img {
 }
 
 .portimage img {
-    width: 300px;
+    width: 200px;
     height: auto;
     padding: 10px;
 }
-
-.portimage iframe {
-    width: 300px;
-    height: auto;
+.portmovie{
+    text-align: center;
+}
+.portmovie li{
+    list-style-type: none;
+}
+.portmovie iframe {
+    width: 200px;
+    height: 112.5px;
     padding: 10px;
 }
 
@@ -151,7 +151,40 @@ img {
     height: auto;
 }
 
+/*subject タブ*/
+.tab{
+    max-width: 600px;
+    margin: 0 auto;
+  }
+  
+  .tab-list{
+    display: flex;
+  }
+  
+  .tab-list-item{
+    width: 25%;
+    text-align: center;
+    padding: 8px 0;
+    cursor: pointer;
+  }
+  
+  .tab-contents{
+    background-color: #ebf6f7;
+    display: none;
+    padding: 20px;
+  }
 
+  .is-btn-active{
+    background-color: #67b5b7;
+    color: aliceblue;
+    font-weight: bold;
+  }
+
+  .is-contents-active{
+    display: block;
+  }
+
+/*footer*/
 footer {
     background: aliceblue;
     color: gray;
@@ -272,11 +305,18 @@ footer {
         text-align: left;
     }
 
+
+
+
+/* タブレット用 600px以上〜*/
+@media all and (min-width: 600px) {
+    #wrap {
+        width: 95%;
+    }
     /* portfolioページの画像*/
     .portimage {
         position: relative;
         display: flex;
-
     }
 
     .portimage li {
@@ -287,14 +327,21 @@ footer {
     .portimage li img {
         width: 100%;
     }
-}
 
-/* タブレット用 600px以上〜*/
-@media all and (min-width: 600px) {
-    #wrap {
-        width: 95%;
+    .portmovie{
+        position: relative;
+        display: flex;
     }
-
+    .portmovie li {
+        width: 100%;
+        padding: 5px;
+        aspect-ratio: 16/9;
+    }
+    .portmovie li iframe {
+        width: 100%;
+        height: 100%;
+    }
+}
 
 }
 

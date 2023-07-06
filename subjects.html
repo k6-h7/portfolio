@@ -3,8 +3,7 @@
 
 <head>
     <meta charset="UTF-8">
-    <script src="https://code.jquery.com/jquery-3.7.0.min.js" integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g=" crossorigin="anonymous"></script>
-    <script src="button script.js"></script>
+   
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>subjects</title>
 </head>
@@ -14,31 +13,35 @@
     <body>
         <div id="wrap">
 
-            <header>
-                <a href="index.html"><h1>My Portfolio</h1></a>
-              </header>
+          <header>
+            <a href="index.html"><h1>My Portfolio</h1></a>
+          </header>
         
-              <input type="checkbox" id="navBtn" class="nav-toggle">
-              <label for="navBtn" class="open"><span></span></label>
+          <input type="checkbox" id="navBtn" class="nav-toggle">
+          <label for="navBtn" class="open"><span></span></label>
         
-              <nav class="main-menu">
-                <ul>
-                  <li><a href="about.html">About</a></li>
-                  <li><a href="gallery.html">Gallery</a></li>
-                  <li><a href="subjects.html">Subjects</a></li>
-                </ul>
-              </nav>
-            <main>
-                <h1>Subjects</h1>
-                <br>
-                <div class="button Set">
-                  <botton class="gakunen">学年</botton>
-                  <botton class="bunya">分野</botton>
-                </div>
+          <nav class="main-menu">
+            <ul>
+              <li><a href="about.html">About</a></li>
+               <li><a href="gallery.html">Gallery</a></li>
+               <li><a href="subjects.html">Subjects</a></li>
+            </ul>
+          </nav>
+          <main>
+            <h1>Subjects</h1>
+            <br>
+            <div class="tab">
+               <!-- タブを構成するブロック -->
+              <div class="tab-list">
+                <button class="tab-list-item is-btn-active">学年</button>
+                <button class="tab-list-item">分野</button>
+              </div>
                 
-                <div class="gakunen youso">
+
+              <div class="tab-contents-wrap">
+                <div class="tab-contents is-contents-active">
                   <h4>2年前期</h4>
-                  <ul class="subjects">
+                  <ul>
                     <li>情報デザイン演習IIA</li>
                     <li>情報デザイン演習IIB</li>
                     <li>Webデザイン演習</li>
@@ -51,7 +54,7 @@
                   </ul>
                   <br>
                   <h4>1年後期</h4>
-                  <ul class="subjects">
+                  <ul>
                     <li>ソーシャルデザイン応用演習</li>
                     <li>情報デザイン演習Ⅰ</li>
                     <li>デザイン史</li>
@@ -66,7 +69,7 @@
                   </ul>
                   <br>
                   <h4>1年前期</h4>
-                  <ul class="subjects">
+                  <ul>
                     <li>ソーシャルデザイン概論 </li>
                     <li>ソーシャルデザイン演習</li>
                     <li>視覚デザイン演習</li>
@@ -79,10 +82,69 @@
                     <li>Reading&Writing I</li>
                     <li>Listening&Speaking I</li>
                   </ul>
-                </div>
+                    <!--/area--></div>
 
-
-            </main>
+                  <div class="tab-contents">
+                  <h4>デザイン演習</h4>
+                    <ul>
+                      <li>ソーシャルデザイン演習</li>
+                      <li>視覚デザイン演習</li>
+                      <li>平面構成</li>
+                      <li>情報デザイン演習Ⅰ</li>
+                      <li>情報デザイン演習IIA</li>
+                      <li>情報デザイン演習IIB</li>
+                      <li>Webデザイン演習</li>
+                    </ul>
+                    <br>
+                    <h4>デザイン企画</h4>
+                    <ul>
+                      <li>ソーシャルデザイン応用演習</li>
+                      <li>デザイン企画演習</li>
+                    </ul>
+                    <br>
+                    <h4>美術　講義</h4>
+                    <ul>
+                      <li>ソーシャルデザイン概論 </li>
+                      <li>美術概論</li>
+                      <li>色彩学</li>
+                      <li>デザイン史</li>
+                      <li>サウンド芸術概論</li>
+                      <li>映像芸術表現論</li>
+                    </ul>
+                    <br>
+                    <h4>コンピュータ関連</h4>
+                    <ul>
+                      <li>コンピュータ概論</li>
+                      <li>コンピュータ基礎演習 </li>
+                      <li>マルチメディア概論</li>
+                      <li>プログラミング導入</li>
+                      <li>AI導入</li>
+                      <li>実践クロス演習(AI×デザイン)</li>
+                      <li>データリテラシー</li>
+                    </ul>
+                    <br>
+                    <h4>基礎教養</h4>
+                    <ul>
+                      <li>世界の歴史</li>
+                    </ul>
+                    <br>
+                    <h4>キャリア</h4>
+                    <ul>
+                      <li>キャリア形成基礎論</li>
+                    </ul>
+                    <br>
+                    <h4>英語</h4>
+                    <ul>
+                      <li>Reading&Writing I</li>
+                      <li>Listening&Speaking I</li>
+                      <li>Reading&Writing II</li>
+                      <li>Listening&Speaking II</li>
+                      <li>Labo Training I</li>
+                      <li>For Skills I</li>
+                    </ul>
+                    <br>
+                  <!--/area--></div>
+        </main>
 
 
 
@@ -90,5 +152,6 @@
                 <p>&copy; SampleSite </p>
             </footer>
     </body>
-
+    <script src="https://code.jquery.com/jquery-3.7.0.min.js" integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g=" crossorigin="anonymous"></script>
+    <script src="js/button_script.js"></script>
 </html>
