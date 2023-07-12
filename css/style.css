@@ -117,6 +117,19 @@ img {
     width: calc(33.3% - 4px);
 }
 
+/* Gallary link*/
+.link h1{
+    background: white;
+    color: #00947a;
+    text-decoration: none;
+}
+.link h1:hover {
+    background: white;
+    color: #0068b7;
+
+    text-decoration: underline;
+}
+
 /* Galleryページの画像*/
 
 .portimage {
@@ -374,16 +387,13 @@ footer {
     .flex .image {
         width: 50%;
         /*画像サイズ指定*/
-        margin: 0;
+        margin-right: 20px;
         padding: 0;
         overflow: hidden;
         position: relative;
     }
-
- 
-    .flex .text {
-        margin: 0 0 0 20px;
-        padding: 0;
+    .right{
+        width: 50%;
     }
 
     /* 画像を天地中央表示 */
