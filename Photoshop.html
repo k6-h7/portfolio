@@ -4,7 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Gallery-Photoshop</title>
+    <link rel="stylesheet" href="css/lightbox.min.css">
     <link rel="stylesheet" href="css/style.css">
 </head>
 
@@ -32,10 +33,11 @@
                 <h1>Gallery</h1>
                 </a>
             </div>
-            <h3>Adobe Illustrator</h3>
+            <h3>Adobe Photoshop</h3>
             <br>
             <div class="flex">
-                <figure class="image"><img src="images/portfolio-images/20220604.jpg" alt=""></figure>
+                <div id="photomontage"></div>
+                <figure class="image"><a href="images/portfolio-images/拡大表示用/20220604.jpg" data-lightbox="1" data-title="視覚デザイン演習"><img src="images/portfolio-images/20220604.jpg" alt=""></a></figure>
                 <div class="right">
                   <h3 class="title">夏の幻想</h3>
                   <p class="text">視覚デザイン演習　演習課題</p>
@@ -47,7 +49,8 @@
             </div>
             <br>
             <div class="flex">
-                <figure class="image"><img src="images/portfolio-images/220518a.jpg" alt=""></figure>
+                <div id="yu-yake"></div>
+                <figure class="image"><a href="images/portfolio-images/拡大表示用/220518a.jpg" data-lightbox="1" data-title="視覚デザイン演習"><img src="images/portfolio-images/220518a.jpg" alt=""></a></figure>
                 <div class="right">
                   <h3 class="title">夕暮れの街</h3>
                   <p class="text">視覚デザイン演習　演習課題</p>
@@ -62,8 +65,11 @@
 
           
         <footer>
-            <p>&copy; SampleSite </p>
+            <p>&copy; Hinari Koroki </p>
         </footer>
+        <a href="#" class="pagetop">▲</a>
+        <script src="https://code.jquery.com/jquery-3.7.0.min.js" integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g=" crossorigin="anonymous"></script>
+        <script src="js/lightbox.min.js"></script>
 </body>
 
 </html>
